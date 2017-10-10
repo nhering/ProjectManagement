@@ -10,11 +10,12 @@ namespace ProjectManagement.Models
     public class Card
     {
         public int CardID { get; set; }
+        public int ProjectID { get; set; }
         public CardStatus? Status { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public People PersonAssigned { get; set; }
         public IEnumerable<Comment> Comments { get; set; }
-        public IEnumerable<People> PeopleAssigned { get; set; }
     }
 
     public enum CardStatus

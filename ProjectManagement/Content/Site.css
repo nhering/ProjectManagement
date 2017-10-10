@@ -28,11 +28,11 @@ textarea {
   padding: 5px;
   margin-top: 10px;
   color: inherit;
-  background-color: rgba(100, 200, 200, 1);
+  background-color: rgba(100, 200, 200, .8);
   border-radius: 5px;
   text-align: left;
   border: 1px solid black;
-  box-shadow: rgba(0,0,0,.2) 2px 2px unset;
+  box-shadow: 2px 2px 0px rgba(0,0,0,.3);
 }
 
 .pm-title h1{
@@ -44,20 +44,27 @@ textarea {
   padding: 5px;
   margin-top: 10px;
   color: inherit;
-  background-color: rgba(100, 200, 200, 1);
+  background-color: rgba(100, 200, 200, .8);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-align: justify;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  box-shadow: 2px 2px 0px rgba(0,0,0,.3);
 }
 
 .pm-section-body {
-  min-height: 500px;
-  max-height: 500px;
+  min-height: 700px;
+  max-height: 700px;
   overflow-y: scroll;
   padding: 5px;
   color: inherit;
-  background-color: rgba(100, 200, 200, 1);
+  background-color: rgba(100, 200, 200, .8);
   text-align: justify;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  box-shadow: 2px 0px 0px rgba(0,0,0,.3);
 }
 
 .pm-section-body h1, h2, h3, h4, h5 {
@@ -76,11 +83,13 @@ textarea {
   padding: 5px;
   min-height: 5px;
   max-height: 6px;
-  background-color: rgba(100, 200, 200, 1);
+  background-color: rgba(100, 200, 200, .8);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   border-bottom: 1px solid black;
-  box-shadow: rgba(0,0,0,.2) 2px 2px unset;
+  box-shadow: 2px 2px 0px rgba(0,0,0,.3);
 }
 
 
@@ -88,21 +97,24 @@ textarea {
 .pm-card {
   padding: 5px;
   min-height: 100px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, .7);
   margin-top: 5px;
   color: inherit;
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, .8);
   border-radius: 5px;
 }
 
 .pm-card-new {
   padding: 5px;
   min-height: 32px;
-  border: 1px solid black;
-  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, .7);
+  margin-top: -5px;
   color: inherit;
-  background-color: rgba(255, 255, 255, .3);
-  border-radius: 5px;
+  background-color: rgb(226, 242, 242);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: sticky;
+  top: -5px;
 }
 
 .pm-card h1, h2, h3, h4, h5 {
@@ -119,4 +131,15 @@ textarea {
 @media screen and (min-width: 768px) {
   .pm-card {
   }
+}
+
+.pm-page-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(100, 200, 200, 1);
+    border-top: 1px solid black;
+    text-align: center;
+    margin: 0px;
 }

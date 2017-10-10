@@ -74,13 +74,9 @@ namespace ProjectManagement.Controllers
                 return HttpNotFound();
             }
 
-            var projectView = new ProjectView();
-
-            projectView.project = project;
-            projectView.Active = project.Cards.Where(a => a.Status.Equals("Active"));
+            var projectView = new ProjectView(project);            
             
-
-            return View(project);
+            return View(projectView);
         }
 
         // POST: Project/Edit/5

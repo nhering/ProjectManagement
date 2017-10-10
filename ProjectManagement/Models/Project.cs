@@ -13,7 +13,6 @@ namespace ProjectManagement.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public ProjectStatus? Phase { get; set; }
-        public IEnumerable<Card> Cards { get; set; }
     }
 
     public enum ProjectStatus

@@ -187,6 +187,14 @@
     <Compile Include="Migrations\201710100055106_editProjectModel.Designer.cs">
       <DependentUpon>201710100055106_editProjectModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710100244548_editProjectModel1.cs" />
+    <Compile Include="Migrations\201710100244548_editProjectModel1.Designer.cs">
+      <DependentUpon>201710100244548_editProjectModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710100245289_editProjectModel2.cs" />
+    <Compile Include="Migrations\201710100245289_editProjectModel2.Designer.cs">
+      <DependentUpon>201710100245289_editProjectModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Card.cs" />
@@ -282,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710100055106_editProjectModel.resx">
       <DependentUpon>201710100055106_editProjectModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710100244548_editProjectModel1.resx">
+      <DependentUpon>201710100244548_editProjectModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710100245289_editProjectModel2.resx">
+      <DependentUpon>201710100245289_editProjectModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -28,9 +28,11 @@ textarea {
   padding: 5px;
   margin-top: 10px;
   color: inherit;
-  background-color: rgba(150, 200, 200, 1);
+  background-color: rgba(100, 200, 200, 1);
   border-radius: 5px;
   text-align: left;
+  border: 1px solid black;
+  box-shadow: rgba(0,0,0,.2) 2px 2px unset;
 }
 
 .pm-title h1{
@@ -42,7 +44,7 @@ textarea {
   padding: 5px;
   margin-top: 10px;
   color: inherit;
-  background-color: rgba(150, 200, 200, 1);
+  background-color: rgba(100, 200, 200, 1);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-align: justify;
@@ -54,7 +56,7 @@ textarea {
   overflow-y: scroll;
   padding: 5px;
   color: inherit;
-  background-color: rgba(150, 200, 200, 1);
+  background-color: rgba(100, 200, 200, 1);
   text-align: justify;
 }
 
@@ -74,9 +76,11 @@ textarea {
   padding: 5px;
   min-height: 5px;
   max-height: 6px;
-  background-color: rgba(150, 200, 200, 1);
+  background-color: rgba(100, 200, 200, 1);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-bottom: 1px solid black;
+  box-shadow: rgba(0,0,0,.2) 2px 2px unset;
 }
 
 
@@ -84,6 +88,7 @@ textarea {
 .pm-card {
   padding: 5px;
   min-height: 100px;
+  border: 1px solid black;
   margin-top: 5px;
   color: inherit;
   background-color: rgba(255, 255, 255, .3);
@@ -92,8 +97,8 @@ textarea {
 
 .pm-card-new {
   padding: 5px;
-  min-height: 50px;
-  max-height: 50px;
+  min-height: 32px;
+  border: 1px solid black;
   margin-top: 5px;
   color: inherit;
   background-color: rgba(255, 255, 255, .3);

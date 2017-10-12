@@ -61,7 +61,7 @@ namespace ProjectManagement.Controllers
         }
 
         // GET: Project/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Manage(int? id)
         {
             if (id == null)
             {
@@ -84,7 +84,7 @@ namespace ProjectManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProjectID,Title,Description,Phase")] Project project)
+        public ActionResult Manage([Bind(Include = "ProjectID,Title,Description,Phase")] Project project)
         {
             if (ModelState.IsValid)
             {

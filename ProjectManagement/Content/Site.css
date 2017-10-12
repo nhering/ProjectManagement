@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 35px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -128,22 +128,17 @@ textarea {
   color: inherit;
 }
 
-@media screen and (min-width: 768px) {
-  .pm-card {
-  }
-}
-
 .pm-page-footer {
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     background-color: rgba(100, 200, 200, 1);
-    border-top: 1px solid black;
+    box-shadow: 0px 0px 7px black;
     text-align: center;
     font-size: 12px;
     color: white;
-    text-shadow: 1px 1px 1px black;
-    padding: 3px;
+    text-shadow: 0px -1px 1px black;
+    padding-top: 4px;
     margin: 0px;
 }

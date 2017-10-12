@@ -6,7 +6,7 @@
 <style>
     body {
         background-image: url('../../Images/Office01-optimized.jpg');
-        background-position: center;
+        background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -33,42 +33,24 @@
             <h2>Pending</h2>
         </div>
         <div class="pm-section-body">
-            <div class="pm-card-new" role="button">
-                Add new...
-            </div>
+
+            <a>
+                <div class="pm-card-new" role="button">
+                    <b class="glyphicon-plus" style="font-size: 30px;"></b>
+                    @Html.ActionLink(" ", "Create", "Card")
+                </div>
+            </a>
+
             @foreach (var item in Model.Pending)
             {
-                <a href="~/Home/About" target="_top">
-                    <div class="pm-card">
-                        @item.Title
-                        <p>@item.Description</p>
-                    </div>
-                </a>
+            <a>
+                <div class="pm-card">
+                    @item.Title
+                    <p>@item.Description</p>
+                </div>
+            </a>
             }
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
+
         </div>
         <div class="pm-section-footer"></div>
     </div>

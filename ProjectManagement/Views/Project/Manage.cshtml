@@ -34,21 +34,23 @@
         </div>
         <div class="pm-section-body">
 
-            <a href="">
+            <a href="@Url.Action("Create", "Card")">
                 <div class="pm-card-new">
                     <p class="glyphicon-plus" style="font-size: 30px;"></p>
                     @Html.ActionLink(" ", "Create", "Card")
                 </div>
             </a>
-
-            @foreach (var item in Model.Pending)
+            @if (Model.Pending != null)
             {
-            <a href="@Url.Action("Edit", "Card", @item.CardID)">
-                <div class="pm-card">
-                    @item.Title
-                    <p>@item.Description</p>
-                </div>
-            </a>
+                foreach (var item in Model.Pending)
+                {
+                <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                    <div class="pm-card">
+                        @item.Title
+                        <p>@item.Description</p>
+                    </div>
+                </a>
+                }
             }
 
         </div>
@@ -60,30 +62,20 @@
             <h2>Active</h2>
         </div>
         <div class="pm-section-body">
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
+
+            @if (Model.Active != null)
+            {
+                foreach (var item in Model.Active)
+                {
+                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                        <div class="pm-card">
+                            @item.Title
+                            <p>@item.Description</p>
+                        </div>
+                    </a>
+                }
+            }
+
         </div>
         <div class="pm-section-footer"></div>
     </div>
@@ -93,30 +85,20 @@
             <h2>Completed</h2>
         </div>
         <div class="pm-section-body">
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
+
+            @if (Model.Completed != null)
+            {
+                foreach (var item in Model.Completed)
+                {
+                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                        <div class="pm-card">
+                            @item.Title
+                            <p>@item.Description</p>
+                        </div>
+                    </a>
+                }
+            }
+
         </div>
         <div class="pm-section-footer"></div>
     </div>
@@ -126,30 +108,20 @@
             <h2>Confirmed</h2>
         </div>
         <div class="pm-section-body">
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
-            <div class="pm-card">
-                And here is some info
-            </div>
+
+            @if (Model.Confirmed != null)
+            {
+                foreach (var item in Model.Confirmed)
+                {
+                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                        <div class="pm-card">
+                            @item.Title
+                            <p>@item.Description</p>
+                        </div>
+                    </a>
+                }
+            }
+
         </div>
         <div class="pm-section-footer"></div>
     </div>

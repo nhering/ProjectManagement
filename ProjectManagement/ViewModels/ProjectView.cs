@@ -9,6 +9,8 @@ namespace ProjectManagement.ViewModels
 {
     public class ProjectView
     {
+        PMContext db = new PMContext();
+
         public Project project { get; set; }
         public IEnumerable<Card> Pending { get; set; }
         public IEnumerable<Card> Active { get; set; }
@@ -17,13 +19,16 @@ namespace ProjectManagement.ViewModels
 
         public ProjectView(Project project)
         {
-            var db = new PMContext();
             this.project = project;
-
-            this.Pending = new List<Card>
+            var cards = db.Cards.Where(c => c.ProjectID == project.ProjectID).ToList();
+            
+            if (cards.Count() > 0)
             {
-                new Card { Title = "" }
-            };
+                Pending = cards.Where(c => c.Status == CardStatus.Pending).ToList();
+                Active = cards.Where(c => c.Status == CardStatus.Active).ToList();
+                Completed = cards.Where(c => c.Status == CardStatus.Completed).ToList();
+                Confirmed = cards.Where(c => c.Status == CardStatus.Confirmed).ToList();
+            }
         }
     }
 }

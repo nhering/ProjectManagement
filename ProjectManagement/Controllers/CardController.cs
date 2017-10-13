@@ -36,10 +36,22 @@ namespace ProjectManagement.Controllers
             return View(card);
         }
 
+        //// GET: Card/Create
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
+
         // GET: Card/Create
-        public ActionResult Create()
+        public ActionResult Create(int? projectID)
         {
-            return View();
+            if (projectID == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var card = new Card();
+            card.ProjectID = projectID ?? default(int);
+            return View(card);
         }
 
         // POST: Card/Create

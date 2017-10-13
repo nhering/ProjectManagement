@@ -44,7 +44,7 @@
             {
                 foreach (var item in Model.Pending)
                 {
-                <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                <a href="@Url.Action("Edit", "Card", new { id = item.CardID})">
                     <div class="pm-card">
                         @item.Title
                         <p>@item.Description</p>
@@ -67,7 +67,7 @@
             {
                 foreach (var item in Model.Active)
                 {
-                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID})">
                         <div class="pm-card">
                             @item.Title
                             <p>@item.Description</p>
@@ -90,7 +90,7 @@
             {
                 foreach (var item in Model.Completed)
                 {
-                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID})">
                         <div class="pm-card">
                             @item.Title
                             <p>@item.Description</p>
@@ -113,7 +113,7 @@
             {
                 foreach (var item in Model.Confirmed)
                 {
-                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID })">
+                    <a href="@Url.Action("Edit", "Card", new { id = item.CardID})">
                         <div class="pm-card">
                             @item.Title
                             <p>@item.Description</p>

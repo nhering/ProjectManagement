@@ -74,7 +74,7 @@ namespace ProjectManagement.Controllers
                 return HttpNotFound();
             }
 
-            var projectView = new ProjectView(project);            
+            var projectView = new ProjectView(project);       
             
             return View(projectView);
         }

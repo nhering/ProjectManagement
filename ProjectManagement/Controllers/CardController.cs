@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ProjectManagement.DAL;
 using ProjectManagement.Models;
+using ProjectManagement.ViewModels;
 
 namespace ProjectManagement.Controllers
 {
@@ -51,7 +52,7 @@ namespace ProjectManagement.Controllers
             }
             var card = new Card();
             card.ProjectID = projectID ?? default(int);
-            return View(card);
+            return View();
         }
 
         // POST: Card/Create
@@ -78,11 +79,15 @@ namespace ProjectManagement.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Card card = db.Cards.Find(id);
+
             if (card == null)
             {
                 return HttpNotFound();
             }
+            
+
             return View(card);
         }
 

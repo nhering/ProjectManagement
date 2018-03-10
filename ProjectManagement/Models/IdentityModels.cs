@@ -21,8 +21,7 @@ namespace ProjectManagement.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("PMContext", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("PMContext", throwIfV1Schema: false)
         {
         }
         
@@ -30,5 +29,7 @@ namespace ProjectManagement.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<People> Person { get; set; }
     }
 }
